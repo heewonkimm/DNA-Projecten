@@ -1,4 +1,4 @@
-history.scrollRestoration = "auto"
+// history.scrollRestoration = "auto"
 
 // $(function() {
 // $(window).resize(function() {
@@ -22,18 +22,19 @@ gsap.to(".header .headertxt", {
     }
 });
 
+
 // sc_home
 //메인 이미지 pin
 gsap.to(".sc_home .group_main", {
     scrollTrigger: {
         trigger:".group_main",
         start:"0% top",
-        end:"25% top",
+        end:"50% top",
         pin: true,
         // markers:true
     }
 });
-//메인 타이틀
+//메인 타이틀 pin
 gsap.to(".sc_home .group_title", {
     scrollTrigger: {
         trigger:".sc_home",
@@ -45,9 +46,7 @@ gsap.to(".sc_home .group_title", {
 });
 
 
-
-
-
+//메인 이미지들 슬라이드 업
 const homeMotion = gsap.timeline({scrollTrigger: {
     trigger:".sc_home",
     start:"0% top",
@@ -59,17 +58,14 @@ const homeMotion = gsap.timeline({scrollTrigger: {
 homeMotion
 .addLabel('a')
 .to(".sc_home .group_main", {width:"49%"},'a')
-// .to(".sc_home .group_main .home_bg", {width:"49%"},'a')
-.to(".sc_home .group_sub1", {y:"-70vh"},'a')
+.to(".sc_home .group_sub1", {y:"-80%"},'a')
 .to(".sc_home .group_sub1 .home_bg", {opacity:0.4},'a')
 .addLabel('b')
-.to(".sc_home .group_sub2", {y:"-50vh"},'b-=0.3')
+.fromTo(".sc_home .group_sub2", {y:"30%"},{y:"-30%"},'b-=0.3')
 .to(".sc_home .group_sub2 .home_bg", {opacity:0.4},'b-=0.3')
 .addLabel('c')
-.to(".sc_home .group_sub3", {y:"-40vh"},'c-=0.3')
+.fromTo(".sc_home .group_sub3", {y:"30%"},{y:"-30%"},'c-=0.3')
 .to(".sc_home .group_sub3 .home_bg", {opacity:0.4},'c-=0.3');
-
-
 
 
 /*sc_round */
@@ -89,8 +85,6 @@ roundMotion
 .to(".sc_round.r_top .first",{paddingBottom:"69.9%", width:"69.9%", top:"15.1%", left:"15.1%"},'d')
 .to(".sc_round.r_top .third",{paddingBottom:"39.9%", width:"39.9%", top:"30.1%", left:"30.1%"},'d')
 .to(".sc_round.r_top .fifth",{paddingBottom:"9.9%", width:"9.9%", top:"45.1%", left:"45.1%"},'d')
-
-
 
 
 /*sc_work*/
@@ -113,11 +107,12 @@ gsap.set(l, {y:"-8vw"})
         slideUpTxt.from(l, {y:"8vw", opacity:0})
         
     }else{
-        slideUpTxt.from(l, {y:"15vw", opacity:0})
+        slideUpTxt.from(l, {y:"10vw", opacity:0})
     }
     i++;
     // console.log(i)
 });
+
 
 //hide_box 공통 모션
 workimageEl = document.querySelectorAll('.sc_work .hide_box');
@@ -125,9 +120,9 @@ let i2 = 0;
 workimageEl.forEach(l2 => {
     const hideBoxMotion = gsap.timeline({scrollTrigger: {
         trigger: l2,
-        start: "0% 90%",
-        end: "10% 90%",
-        // markers:true,
+        start: "0% 92%",
+        end: "10% 92%",
+        markers:true,
     }});
 
     if(i2 === 2){                      
@@ -137,6 +132,7 @@ workimageEl.forEach(l2 => {
     }
     i2++;
 });
+
 
 //group_bottom 프로젝트 stagger
 gsap.to(".sc_work .project_inner", {
@@ -150,7 +146,6 @@ gsap.to(".sc_work .project_inner", {
         // markers:true,
     }
 });
-
 
 
 //more_area 공통 스크롤 애니메이션
@@ -169,7 +164,7 @@ moreScaleEl.forEach(l3 => {
 });
 
 
-
+//activity 
 gsap.from(".activity_inner2", {
     y:"10vw", 
     opacity:0,
@@ -220,54 +215,6 @@ roundMotion2
 .to(".sc_round.r_bottom .fifth",{paddingBottom:"9.9%", width:"9.9%", top:"45.1%", left:"45.1%"},'d');
 
 
-
-
-
-
-
-
-
-//sc_activity 가로스크롤 + 타이틀 슬라이드 업/////////////////////////미쿼
-// const textBox = gsap.utils.toArray(".sc_activity .group_slide .text_box");
-// const horizontalScroll = gsap.timeline({
-//     ease:'none',
-//     scrollTrigger: {
-//     trigger: ".activity_inner1",
-//     pin: true,
-//     // pinSpacing: false,
-//     scrub: 1,
-//     start: "0% -10%",//20%
-//     end: "+=2500",
-//     // markers: true
-// }});
-// horizontalScroll
-// .addLabel('f')
-// .to('.slide_inner2', {xPercent:-60},'f')
-// .to(".sc_activity .group_text", {duration:0.1, y:-300},'f');
-
-
-
-
-/*sc_round */////////////////////////////////미쿼
-// bottom round 모션
-// const roundMotion2 = gsap.timeline({scrollTrigger: {
-//     trigger:".sc_round.r_bottom ",
-//     start:"0% 20%",
-//     end:"8% top",
-//     pin:true,
-//     pinSpacing: false,
-//     scrub: 1,
-//     // markers: true,
-// }});
-// roundMotion2
-// .addLabel('d')
-// .to(".sc_round.r_bottom .round_inner", {paddingBottom:"175%", width:"175%"},'d')
-// .to(".sc_round.r_bottom .first",{paddingBottom:"69.9%", width:"69.9%", top:"15.1%", left:"15.1%"},'d')
-// .to(".sc_round.r_bottom .third",{paddingBottom:"39.9%", width:"39.9%", top:"30.1%", left:"30.1%"},'d')
-// .to(".sc_round.r_bottom .fifth",{paddingBottom:"9.9%", width:"9.9%", top:"45.1%", left:"45.1%"},'d');
-
-
-
 //sc_relation
 gsap.set(".relation_inner", {y:"-10vw"})
 const relationTitleMotion = gsap.timeline({scrollTrigger: {
@@ -296,16 +243,7 @@ relationListMotion
 
 
 
-
-
-
-
-
-
-
-
-
-////////////////////////////////////////////////
+////////////////////////////////////////////////반응형
 
 ScrollTrigger.matchMedia({
     // large
@@ -321,50 +259,16 @@ ScrollTrigger.matchMedia({
         }});
         homeMotion.to(".sc_home .group_main", {width:"49%", height:"30%"},'a');
 
-
-        
-            
-
-
     },
     // medium
     "(min-width: 768px) and (max-width: 1023px)": function() {
-        //메인 홈 모션
-        const homeMotion = gsap.timeline({scrollTrigger: {
-            trigger:".sc_home",
-            start:"0% top",
-            end:"70% top",
-            scrub: 1,
-            // pin:".group_title .title_box",
-            // markers: true,
-        }});
-        homeMotion
-        .addLabel('a')
-        .to(".sc_home .group_main", {width:"49%", height:"30%"},'a')
-        // .to(".sc_home .group_main .home_bg", {width:"49%"},'a')
-        .to(".sc_home .group_sub1", {y:"-50vh"},'a')
-        .to(".sc_home .group_sub1 .home_bg", {opacity:0.4},'a')
-        .addLabel('b')
-        .to(".sc_home .group_sub2", {y:"-30vh"},'b-=0.3')
-        .to(".sc_home .group_sub2 .home_bg", {opacity:0.4},'b-=0.3')
-        .addLabel('c')
-        .to(".sc_home .group_sub3", {y:"-20vh"},'c-=0.3')
-        .to(".sc_home .group_sub3 .home_bg", {opacity:0.4},'c-=0.3');
 
-
-
-
-
-
-    
     },
     // small
     "(max-width: 767px)": function() {
-          
     },
     // all
     "all": function() {
-
         
     }
     

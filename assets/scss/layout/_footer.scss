@@ -7,14 +7,31 @@
         border-bottom: solid 2px #fcfcfc;
         padding-top: 7vw;
         padding-bottom: 7vw;
+        @include tablet {
+            padding-top: 10vw;
+            padding-bottom: 10vw;   
+        }
+        @include mobile {
+            border-bottom: solid 1px #fcfcfc
+        }
         .group_view {
             width: 39vw;
+            @include tablet {
+                width: 35vw;
+            }
+            @include mobile {
+                display: none;
+            }
             .view_title {
                 font-size: 5.2083vw;
                 color: #fcfcfc;
                 font-weight: 600;
                 line-height: 1;
-                margin-bottom: 1.83vw;                
+                margin-bottom: 1.83vw;    
+                @include tablet {
+                    font-size: 6.2vw;
+                    margin-bottom: 2.5vw; 
+                }
             }
             .view_btn {
                 display: inline-block;
@@ -27,6 +44,16 @@
                 border-radius: 5.2083vw;
                 padding: 0 6.0416vw;
                 transition: all 0.6s ease;
+                @include desktop {
+                    font-size: 1.5vw;
+                    padding: 0 4vw;
+                    line-height: 2.4;
+                }
+                @include tablet {
+                    height: 5.5vw;
+                    line-height: 2.3;
+                    font-size: 2.3vw;
+                }
                 &:hover {
                     color: $black-font-color;
                     background-color: $main-font-color;
@@ -36,17 +63,51 @@
         .group_inform, .group_contact {
             width: 16.66vw;
             color: $main-font-color;
+            @include desktop {
+                width: 20vw;
+            }
+            @include tablet {
+                width: 25vw;
+            }
             .inform_title {
                 font-size: 1.875vw;
                 font-weight: 600;
                 line-height: 1;
                 margin-bottom: 14px;
+                @include desktop {
+                    font-size: 2.2vw;
+                }
+                @include tablet {
+                    font-size: 3.2vw;
+                }
+                @include mobile {
+                    font-size: 7vw;
+                }
             }
             .inform_list {
                 line-height: 2.2;
                 a {
                     text-decoration: underline;
                 }
+                @include desktop {
+                    font-size: 1.4vw;
+                }
+                @include tablet {
+                    font-size: 1.7vw;
+                }
+                @include mobile {
+                    font-size: 3vw;
+                }
+            }
+        }
+        .group_inform {
+            @include mobile {
+                width: 47%;
+            }
+        }
+        .group_contact {
+            @include mobile {
+                width: 42%;
             }
         }
     }
@@ -54,10 +115,24 @@
         @include displayFlexSb;
         padding-top: 1.875vw;
         padding-bottom: 1.875vw;
+        @include tablet {
+            padding-top: 3vw;
+            padding-bottom: 3vw;  
+        }
+        @include mobile {
+            padding-top: 4vw;
+            padding-bottom: 4vw;
+        }
         .fooer_logo {
             display: inline-block;
             width: 10.10416vw;
             height: auto;
+            @include tablet {
+                width: 18vw;  
+            }
+            @include mobile {
+                width: 25vw;
+            }
         }
         .social_link {
             display: inline-block;
@@ -71,6 +146,18 @@
             margin-right: 2.3vw;
             padding: 0 1.5625vw;
             transition: all 0.7s ease;
+            @include tablet {
+                height: 3.84375vw;
+                line-height: 2.2;
+                font-size: 1.7416vw;
+                padding: 0 2.5vw;   
+            }
+            @include mobile {
+                height: 6vw;
+                line-height: 2.3;
+                font-size: 2.6vw;
+                padding: 0 3vw;   
+            }
             &:hover {
                 color: $black-font-color;
                 background-color: $main-font-color;

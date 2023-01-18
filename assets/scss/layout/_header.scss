@@ -10,7 +10,16 @@
     .group_logo {
         width: 10.9375vw;
         height: auto;
-    }
+        @include desktop {
+            width: 14vw;
+        }
+        @include tablet {
+            width: 20vw;
+        }
+        @include mobile {
+            width: 42vw;
+        }
+    } 
     .group_toggle {
         position: relative;
         width: 20%;
@@ -20,8 +29,20 @@
         overflow: hidden;
         .menu_close {
             position: absolute;
-            display: none;//나중에 수정하기//////////////
+            display: none;//수정//////////////
         }
+        @include desktop {
+            font-size: 1.5vw;
+        }
+        @include tablet {
+            font-size: 2vw;
+        }
+        @include mobile {
+            font-size: 4vw;
+        }
+    }
+    @include mobile {
+        padding: 4vw 5vw 0 4vw;
     }
 }
 
