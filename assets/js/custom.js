@@ -122,7 +122,7 @@ workimageEl.forEach(l2 => {
         trigger: l2,
         start: "0% 92%",
         end: "10% 92%",
-        markers:true,
+        // markers:true,
     }});
 
     if(i2 === 2){                      
