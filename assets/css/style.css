@@ -781,6 +781,9 @@ body {
   overflow: hidden;
 }
 
+.sc_work .group_top {
+  padding-bottom: 10px;
+}
 .sc_work .group_top .text_area1 {
   width: 62.5vw;
 }
