@@ -6,6 +6,12 @@
 //     });
 // });
 
+//a태그 기본동작 제어
+$(function(){
+    $("a").on("click",function(e){
+        e.preventDefault();
+    });
+ });
 
 gsap.registerPlugin(ScrollTrigger);
 
