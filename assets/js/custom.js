@@ -1,4 +1,4 @@
-// history.scrollRestoration = "auto"
+history.scrollRestoration = "manual"
 
 // $(function() {
 // $(window).resize(function() {

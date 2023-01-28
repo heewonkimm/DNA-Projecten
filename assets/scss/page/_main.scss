@@ -294,6 +294,13 @@
                 z-index: 2;
                 opacity: 0;
                 transition: all 0.6s ease;
+                @include desktop {
+                    font-size: 3.2vw;
+                    margin-bottom: 2vw;
+                }
+                @include tablet {
+                    font-size: 4vw;
+                }
             }
             .hover_bg {
                 position: absolute;
@@ -328,6 +335,25 @@
                 border-radius: 5.2083vw;
                 margin-right: 0.52083vw;
                 margin-bottom: 0.82083vw;
+                @include desktop {
+                    height: 3vw;
+                    line-height: 2.3;
+                    font-size: 1.3vw;
+                }
+                @include tablet {
+                    height: 3.84375vw;
+                    line-height: 2.2;
+                    font-size: 1.7416vw;
+                    // padding: 0 2.5vw;
+                }
+                @include mobile {
+                    height: 7.2vw;
+                    line-height: 2;
+                    font-size: 3.6vw;
+                    padding: 0 3vw;
+                    margin-right: 2vw;
+                    margin-bottom: 2.5vw;
+                }
             } 
             .count {
                 display: inline-block;
