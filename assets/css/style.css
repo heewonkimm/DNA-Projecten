@@ -1114,6 +1114,9 @@ body {
   color: #fcfcfc;
   overflow: hidden;
 }
+.sc_activity.content_all .project_name {
+  transition: none;
+}
 .sc_activity.content_all .activity_inner1 {
   padding-top: 10vw;
   overflow: hidden;
@@ -1210,6 +1213,14 @@ body {
   white-space: normal;
   margin-right: 2.60416vw;
   padding: 2.6vw 2.6vw 4vw;
+  transition: all 0.6s;
+}
+.sc_activity .group_slide .text_box:hover {
+  color: #FCFCFC;
+  background: #F27405;
+}
+.sc_activity .group_slide .text_box:hover .more_btn {
+  color: #FCFCFC;
 }
 @media (max-width: 1023px) {
   .sc_activity .group_slide .text_box {
@@ -1286,13 +1297,6 @@ body {
     bottom: 6vw;
     font-size: 6vw;
   }
-}
-.sc_activity .group_slide .text_box:hover {
-  color: #FCFCFC;
-  background: #F27405;
-}
-.sc_activity .group_slide .text_box:hover .more_btn {
-  color: #FCFCFC;
 }
 
 .sc_relation {
