@@ -276,7 +276,7 @@ ScrollTrigger.matchMedia({
                 trigger:".sc_work .group_bottom",
                 start:"0% 70%",
                 end:"25% 60%",
-                markers:true,
+                // markers:true,
             }
         });
 
