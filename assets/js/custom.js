@@ -1,3 +1,7 @@
+
+
+
+
 $(function(){
     //a태그 기본동작 제어
     $(function(){
@@ -7,6 +11,49 @@ $(function(){
     });
 
     gsap.registerPlugin(ScrollTrigger);
+
+    // 로드 애니메이션
+    const loadAni2 = gsap.timeline();
+
+    loadAni2
+    .addLabel('a')
+    .to(".page_load .ring.second", {duration:1.2, width:"22vw", height:"22vw", opacity:0, delay:0.5},'a')
+    .to(".page_load .ring.third", {duration:1.2, width:"22vw", height:"22vw", opacity:0, delay:0.9},'a')
+    .addLabel('b')
+    .to(".page_load .ring.fourth", {duration:1.2, width:"22vw", height:"22vw", opacity:0, delay:0.5},'b-=0.7')
+    .to(".page_load .ring.fifth", {duration:1.2, width:"22vw", height:"22vw", opacity:0, delay:0.9},'b-=0.7')
+
+    .addLabel('c')
+    .to(".mask",{opacity:1},'c-=0.8')
+    .to(".mask",{duration:1.3, maskSize:"120vw", ease: Power4.easeIn},'c-=0.5')
+    .to(".page_load .ring.first", {duration:1.3, scale:32, ease: Power4.easeIn},'c-=0.5')
+
+    .addLabel('d')
+    .to(".title_box .alp1_left span:nth-child(1)", {x:0, opacity:1},'d-=0.5')
+    .to(".title_box .alp1_left span:nth-child(2)", {x:0, opacity:1},'d-=0.45')
+    .to(".title_box .alp1_left span:nth-child(3)", {x:0, opacity:1},'d-=0.4')
+    .to(".title_box .alp1_left span:nth-child(4)", {x:0, opacity:1},'d-=0.35')
+    .to(".title_box .alp1_left span:nth-child(5)", {x:0, opacity:1},'d-=0.3')
+    .to(".title_box .alp1_left span:nth-child(6)", {x:0, opacity:1},'d-=0.25')
+
+    .to(".title_box .alp1_right span:nth-child(1)", {x:0, opacity:1},'d-=0.2')
+    .to(".title_box .alp1_right span:nth-child(2)", {x:0, opacity:1},'d-=0.15')
+    .to(".title_box .alp1_right span:nth-child(3)", {x:0, opacity:1},'d-=0.1')
+
+    .to(".title_box .alp2 span:nth-child(1)", {x:0, opacity:1},'d-=0.05')
+    .to(".title_box .alp2 span:nth-child(2)", {x:0, opacity:1},'d')
+    .to(".title_box .alp2 span:nth-child(3)", {x:0, opacity:1},'d+=0.05')
+    .to(".title_box .alp2 span:nth-child(4)", {x:0, opacity:1},'d+=0.1')
+    .to(".title_box .alp2 span:nth-child(5)", {x:0, opacity:1},'d+=0.15')
+    .to(".title_box .alp2 span:nth-child(6)", {x:0, opacity:1},'d+=0.2')
+    .to(".title_box .alp2 span:nth-child(7)", {x:0, opacity:1},'d+=0.25')
+    .to(".title_box .alp2 span:nth-child(8)", {x:0, opacity:1},'d+=0.3')
+    .to(".title_box .alp2 span:nth-child(9)", {x:0, opacity:1},'d+=0.35')
+
+    .to(".mask", {width:"inherit", height:"inherit", overflow:"visible"},'d')
+    .to(".mask", {maskImage:"none"},'d')
+    .to(".page_load", {display:"none"},'d');
+
 
     //header 로고 오파시티
     gsap.to(".header .headertxt", {
@@ -268,6 +315,50 @@ $(function(){
         },
         "(max-width: 767px)": function() {
 
+            // 로드 애니메이션
+            const loadAni2 = gsap.timeline();
+
+            loadAni2
+            .addLabel('a')
+            .to(".page_load .ring.second", {duration:1.2, width:"50vw", height:"50vw", opacity:0, delay:0.5},'a')
+            .to(".page_load .ring.third", {duration:1.2, width:"50vw", height:"50vw", opacity:0, delay:0.9},'a')
+            .addLabel('b')
+            .to(".page_load .ring.fourth", {duration:1.2, width:"50vw", height:"50vw", opacity:0, delay:0.5},'b-=0.7')
+            .to(".page_load .ring.fifth", {duration:1.2, width:"50vw", height:"50vw", opacity:0, delay:0.9},'b-=0.7')
+
+            .addLabel('c')
+            .to(".mask",{opacity:1},'c-=0.8')
+            .to(".mask",{duration:1.3, maskSize:"170vw", ease: Power4.easeIn},'c-=0.5')
+            .to(".page_load .ring.first", {duration:1.3, scale:25, ease: Power4.easeIn},'c-=0.5')
+
+            .addLabel('d')
+            .to(".title_box .alp1_left span:nth-child(1)", {x:0, opacity:1},'d-=0.5')
+            .to(".title_box .alp1_left span:nth-child(2)", {x:0, opacity:1},'d-=0.45')
+            .to(".title_box .alp1_left span:nth-child(3)", {x:0, opacity:1},'d-=0.4')
+            .to(".title_box .alp1_left span:nth-child(4)", {x:0, opacity:1},'d-=0.35')
+            .to(".title_box .alp1_left span:nth-child(5)", {x:0, opacity:1},'d-=0.3')
+            .to(".title_box .alp1_left span:nth-child(6)", {x:0, opacity:1},'d-=0.25')
+
+            .to(".title_box .alp1_right span:nth-child(1)", {x:0, opacity:1},'d-=0.2')
+            .to(".title_box .alp1_right span:nth-child(2)", {x:0, opacity:1},'d-=0.15')
+            .to(".title_box .alp1_right span:nth-child(3)", {x:0, opacity:1},'d-=0.1')
+
+            .to(".title_box .alp2 span:nth-child(1)", {x:0, opacity:1},'d-=0.05')
+            .to(".title_box .alp2 span:nth-child(2)", {x:0, opacity:1},'d')
+            .to(".title_box .alp2 span:nth-child(3)", {x:0, opacity:1},'d+=0.05')
+            .to(".title_box .alp2 span:nth-child(4)", {x:0, opacity:1},'d+=0.1')
+            .to(".title_box .alp2 span:nth-child(5)", {x:0, opacity:1},'d+=0.15')
+            .to(".title_box .alp2 span:nth-child(6)", {x:0, opacity:1},'d+=0.2')
+            .to(".title_box .alp2 span:nth-child(7)", {x:0, opacity:1},'d+=0.25')
+            .to(".title_box .alp2 span:nth-child(8)", {x:0, opacity:1},'d+=0.3')
+            .to(".title_box .alp2 span:nth-child(9)", {x:0, opacity:1},'d+=0.35')
+
+            .to(".mask", {width:"inherit", height:"inherit", overflow:"visible"},'d')
+            .to(".mask", {maskImage:"none"},'d')
+            .to(".page_load", {display:"none"},'d')
+            
+
+            
             //group_bottom 프로젝트 stagger
             gsap.to(".sc_work .project_inner", {
                 opacity:1,
@@ -298,7 +389,7 @@ $(function(){
       },
         // all
         "all": function() {
-            
+
             //hmoe 모션
             const homeMotion = gsap.timeline({
                 scrollTrigger: {

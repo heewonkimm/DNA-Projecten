@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* PP Pangram Sans */
 @font-face {
   font-family: "PP Pangram Sans";
@@ -76,6 +77,13 @@ body {
   line-height: 1.59;
   color: #0a0a0d;
   background: #0a0a0d;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 
 .out {
@@ -608,6 +616,59 @@ body {
   background-color: #FCFCFC;
 }
 
+.page_load {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  overflow: hidden;
+}
+.page_load .ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 5.8vw;
+  height: 5.8vw;
+  border: 1.1vw solid #f27405;
+}
+@media (max-width: 767px) {
+  .page_load .ring {
+    width: 12vw;
+    height: 12vw;
+    border: 2.5vw solid #f27405;
+  }
+}
+
+.mask {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  mask-size: 3.7vw;
+  -webkit-mask-size: 3.7vw;
+  mask-image: url(../images/load_round.png);
+  -webkit-mask-image: url(../images/load_round.png);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+}
+@media (max-width: 767px) {
+  .mask {
+    mask-size: 7.3vw;
+    -webkit-mask-size: 7.3vw;
+  }
+}
+
 .main_wrapper {
   width: 100%;
   height: 100%;
@@ -919,6 +980,14 @@ body {
     margin-bottom: 10vw;
     margin-top: 0 !important;
   }
+  .sc_work .group_center .project_link .project_name {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  .sc_work .group_center .project_link .project_tag {
+    opacity: 0 !important;
+    transform: translateY(0) !important;
+  }
 }
 .sc_work .group_center .thumb_wrap {
   position: relative;
@@ -1095,6 +1164,11 @@ body {
 @media (max-width: 1023px) {
   .sc_work .group_bottom .project_name {
     font-size: 2.8vw;
+  }
+}
+@media (max-width: 767px) {
+  .sc_work .group_bottom .project_name {
+    font-size: 7vw;
   }
 }
 .sc_work .hide_box {
@@ -1437,4 +1511,21 @@ body {
     font-size: 3.4vw;
     margin-bottom: 8vw;
   }
+}
+
+.title_box .alp1 {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .title_box .alp1 {
+    display: block;
+  }
+}
+.title_box .alp1 .alp1_left {
+  margin-right: 50px;
+}
+.title_box span {
+  opacity: 0;
+  display: inline-block;
+  transform: translateX(-2vw);
 }

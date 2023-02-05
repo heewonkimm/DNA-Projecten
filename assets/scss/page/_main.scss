@@ -1,3 +1,53 @@
+.page_load {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    overflow: hidden;
+    .ring {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        width: 5.8vw;
+        height: 5.8vw;
+        border: 1.1vw solid #f27405;
+        @include mobile {
+            width: 12vw;
+            height: 12vw;
+            border: 2.5vw solid #f27405;
+        }
+    }
+}
+
+.mask {
+    opacity: 0;
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    mask-size: 3.7vw;
+    -webkit-mask-size: 3.7vw;
+    mask-image:url(../images/load_round.png);
+    -webkit-mask-image:url(../images/load_round.png);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    @include mobile {
+        mask-size: 7.3vw;
+        -webkit-mask-size: 7.3vw;
+    }
+}
+
+
 .main_wrapper {
     width: 100%;
     height: 100%;
@@ -95,9 +145,6 @@
 
 
 .sc_round {
-    // &.r_bottom{
-    //     height: 90vw;
-    // }
     position: relative;
     height: 80vw;
     margin-top: -7.5vw;
@@ -115,7 +162,6 @@
         max-width: 300%!important;
         height: 0!important;
         padding-bottom: 100%;
-        // background-position-x: 0%;
         .round {
             position: absolute;
             top: 1%;
@@ -270,6 +316,8 @@
                 width: 100%!important;
                 margin-bottom: 10vw;
                 margin-top: 0!important; 
+                .project_name {opacity: 1!important; transform: translateY(0)!important;}
+                .project_tag {opacity: 0!important; transform: translateY(0)!important;}
             }
         }
         .thumb_wrap {
@@ -426,6 +474,9 @@
             }
             @include tablet {
                 font-size: 2.8vw;
+            }
+            @include mobile {
+                font-size: 7vw;
             }
         }
     }
@@ -712,4 +763,23 @@
         }
     }
 }
+
+// 로드 애니메이션
+.title_box {
+    .alp1 {
+        display: flex;
+        @include mobile {
+            display: block;
+        }
+        .alp1_left {
+            margin-right: 50px;
+        }
+    }
+    span {
+        opacity: 0;
+        display: inline-block;
+        transform: translateX(-2vw);
+    }
+}
+
 
