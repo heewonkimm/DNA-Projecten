@@ -459,9 +459,18 @@ $(function(){
         
     });
 
+    // $(window).resize(function(){
+    //     location.reload();
+    //     scrollTrigger.refresh();
+    // });
+
+    lastWidth = window.innerWidth;
     $(window).resize(function(){
-        location.reload();
-        scrollTrigger.refresh();
+    if(window.innerWidth != lastWidth){
+            location.reload();
+            scrollTrigger.refresh();
+    }
+    lastWidth = window.innerWidth;
     });
 
     $(window).scroll(function(){
@@ -469,3 +478,5 @@ $(function(){
     });
 
 });
+
+
