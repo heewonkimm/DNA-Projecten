@@ -464,18 +464,18 @@ $(function(){
     //     scrollTrigger.refresh();
     // });
 
-    lastWidth = window.innerWidth;
-    $(window).resize(function(){
-    if(window.innerWidth != lastWidth){
-            location.reload();
-            scrollTrigger.refresh();
-    }
-    lastWidth = window.innerWidth;
-    });
+    // lastWidth = window.innerWidth;
+    // $(window).resize(function(){
+    // if(window.innerWidth != lastWidth){
+    //         location.reload();
+    //         scrollTrigger.refresh();
+    // }
+    // lastWidth = window.innerWidth;
+    // });
 
-    $(window).scroll(function(){
-        ScrollTrigger.refresh(true)
-    });
+    // $(window).scroll(function(){
+    //     ScrollTrigger.refresh(true)
+    // });
 
 });
 
