@@ -1,53 +1,3 @@
-.page_load {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    overflow: hidden;
-    .ring {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        border-radius: 50%;
-        width: 5.8vw;
-        height: 5.8vw;
-        border: 1.1vw solid #f27405;
-        @include mobile {
-            width: 12vw;
-            height: 12vw;
-            border: 2.5vw solid #f27405;
-        }
-    }
-}
-
-.mask {
-    opacity: 0;
-    width:100%;
-    height: 100%;
-    overflow: hidden;
-    background-size: cover;
-    top: 0;
-    left: 0;
-    mask-size: 3.7vw;
-    -webkit-mask-size: 3.7vw;
-    mask-image:url(../images/load_round.png);
-    -webkit-mask-image:url(../images/load_round.png);
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
-    mask-position: center;
-    -webkit-mask-position: center;
-    @include mobile {
-        mask-size: 7.3vw;
-        -webkit-mask-size: 7.3vw;
-    }
-}
-
-
 .main_wrapper {
     width: 100%;
     height: 100%;
@@ -84,6 +34,13 @@
                 font-size: 17.8vw;
             }
         }  
+    }
+    .cover {
+        width: 100vw;
+        height: 100%;
+        @include tablet {
+            height: 100vh;
+        }
     }
     .group_main {
         position: relative;
@@ -151,6 +108,9 @@
     overflow: hidden;    
     @include tablet {
         height: 115vw;
+        &.r_top {
+            transform: translateY(20%);
+        }
     }
     .round_inner {
         position: absolute;
@@ -305,6 +265,7 @@
             }
         }
         .project_link {
+            height: 100%;
             &:hover {
                 .hover_title, .hover_bg {
                     opacity: 1;

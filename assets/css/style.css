@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* PP Pangram Sans */
 @font-face {
   font-family: "PP Pangram Sans";
@@ -78,12 +77,6 @@ body {
   color: #0a0a0d;
   background: #0a0a0d;
   overflow-y: scroll;
-  -ms-overflow-style: none; /* 인터넷 익스플로러 */
-  scrollbar-width: none; /* 파이어폭스 */
-}
-
-body::-webkit-scrollbar {
-  display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 
 .out {
@@ -616,59 +609,6 @@ body::-webkit-scrollbar {
   background-color: #FCFCFC;
 }
 
-.page_load {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  overflow: hidden;
-}
-.page_load .ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  width: 5.8vw;
-  height: 5.8vw;
-  border: 1.1vw solid #f27405;
-}
-@media (max-width: 767px) {
-  .page_load .ring {
-    width: 12vw;
-    height: 12vw;
-    border: 2.5vw solid #f27405;
-  }
-}
-
-.mask {
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-size: cover;
-  top: 0;
-  left: 0;
-  mask-size: 3.7vw;
-  -webkit-mask-size: 3.7vw;
-  mask-image: url(../images/load_round.png);
-  -webkit-mask-image: url(../images/load_round.png);
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-position: center;
-}
-@media (max-width: 767px) {
-  .mask {
-    mask-size: 7.3vw;
-    -webkit-mask-size: 7.3vw;
-  }
-}
-
 .main_wrapper {
   width: 100%;
   height: 100%;
@@ -710,6 +650,15 @@ body::-webkit-scrollbar {
 @media (max-width: 767px) {
   .sc_home .group_title .title_box {
     font-size: 17.8vw;
+  }
+}
+.sc_home .cover {
+  width: 100vw;
+  height: 100%;
+}
+@media (max-width: 1023px) {
+  .sc_home .cover {
+    height: 100vh;
   }
 }
 .sc_home .group_main {
@@ -786,6 +735,9 @@ body::-webkit-scrollbar {
 @media (max-width: 1023px) {
   .sc_round {
     height: 115vw;
+  }
+  .sc_round.r_top {
+    transform: translateY(20%);
   }
 }
 .sc_round .round_inner {
@@ -962,6 +914,9 @@ body::-webkit-scrollbar {
 }
 .sc_work .group_center .size3 .thumb_wrap {
   height: 39.114583vw;
+}
+.sc_work .group_center .project_link {
+  height: 100%;
 }
 .sc_work .group_center .project_link:hover .hover_title, .sc_work .group_center .project_link:hover .hover_bg {
   opacity: 1;

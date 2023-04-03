@@ -15,20 +15,13 @@
     <!-- FAVICON -->
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 
+    <!--새로고침시 상단 이동-->
+    <script>history.scrollRestoration = "manual"</script>
+
 </head>
 <body>
 
-<!-- page load -->
-<div class="page_load">
-    <div class="ring first"></div>
-    <div class="ring second"></div>
-    <div class="ring third"></div>
-    <div class="ring fourth"></div>
-    <div class="ring fifth"></div>
-</div>
-
-<!-- wrapper -->
-<div class="mask">
+    <!-- wrapper -->
     <div class="wrapper">
     
         <!-- header -->
@@ -70,8 +63,10 @@
                         </h2>
                     </div>
                 </div>
-                <div class="group_main">
-                    <img src="./assets/images/home_main.jpg" alt="메인이미지1">
+                <div class="cover">
+                    <div class="group_main">
+                        <img src="./assets/images/home_main.jpg" alt="메인이미지1">
+                    </div>
                 </div>
                 <div class="group_sub1">
                     <img src="./assets/images/home_sub1.jpg" alt="메인이미2">
@@ -385,8 +380,7 @@
         <!-- //footer -->
     
     </div>
-</div>
-<!-- //wrapper -->
+    <!-- //wrapper -->
 
 
 <!-- SCRIPT -->

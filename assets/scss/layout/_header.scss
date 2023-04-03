@@ -29,7 +29,7 @@
         overflow: hidden;
         .menu_close {
             position: absolute;
-            display: none;//수정//////////////
+            display: none;
         }
         @include desktop {
             font-size: 1.5vw;
