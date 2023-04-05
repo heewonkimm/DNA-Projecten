@@ -349,7 +349,8 @@ function init() {
             });
     
             // //home 메인 이미지 pin
-            const coverPin = gsap.to(".sc_home .cover", {
+            gsap.set(".sc_home .cover", {height:"100vh"});
+            gsap.to(".sc_home .cover", {
                 scrollTrigger: {
                   trigger: ".cover",
                   start: "0% top",
