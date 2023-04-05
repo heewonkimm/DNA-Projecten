@@ -1,5 +1,5 @@
-$(function(){
-    
+
+function init() {
     gsap.registerPlugin(ScrollTrigger);
 
     ScrollTrigger.saveStyles(".sc_round.r_top, .group_main, .slide_inner2, .group_text, .cover");
@@ -29,7 +29,6 @@ $(function(){
             .fromTo(".sc_home .group_sub3", {y:"30%"},{y:"-30%"},'c-=0.3')
             .to(".sc_home .group_sub3 .home_bg", {opacity:0.4},'c-=0.3');
     
-            homeMotion.scrollTrigger.refresh();
     
             //top 라운드
             const roundMotion = gsap.timeline({scrollTrigger: {
@@ -70,9 +69,7 @@ $(function(){
             horizontalScroll
             .addLabel('f')
             .to('.slide_inner2', {xPercent:-60},'f')
-            .to(".sc_activity .group_text", {duration:0.1, y:"-30vh"},'f');
     
-            horizontalScroll.scrollTrigger.refresh();
     
             //bottom 라운드
             const roundMotion2 = gsap.timeline({scrollTrigger: {
@@ -100,8 +97,6 @@ $(function(){
             roundMotionEnd2
             .to(".sc_round.r_bottom",{yPercent:30});
     
-            roundMotion2.scrollTrigger.refresh();
-            roundMotionEnd2.scrollTrigger.refresh();
     
         },
         "(min-width: 768px) and (max-width: 1300px)": function() {
@@ -128,7 +123,6 @@ $(function(){
             .fromTo(".sc_home .group_sub3", {y:"30%"},{y:"-30%"},'f-=0.3')
             .to(".sc_home .group_sub3 .home_bg", {opacity:0.4},'f-=0.3');
     
-            homeMotion.scrollTrigger.refresh();
     
             //top 라운드
             const roundMotion = gsap.timeline({scrollTrigger: {
@@ -169,9 +163,7 @@ $(function(){
             horizontalScroll
             .addLabel('q')
             .to('.slide_inner2', {xPercent:-61},'q')
-            .to(".sc_activity .group_text", {duration:0.2, y:"-35vh"},'q');
     
-            horizontalScroll.scrollTrigger.refresh();
     
             //bottom 라운드
             const roundMotion2 = gsap.timeline({scrollTrigger: {
@@ -199,8 +191,6 @@ $(function(){
             roundMotionEnd2
             .to(".sc_round.r_bottom",{yPercent:50});
     
-            roundMotion2.scrollTrigger.refresh();
-            roundMotionEnd2.scrollTrigger.refresh();
     
         },
         "(max-width: 767px)": function() {
@@ -228,7 +218,6 @@ $(function(){
             .fromTo(".sc_home .group_sub3", {y:"30%"},{y:"-30%"},'i-=0.3')
             .to(".sc_home .group_sub3 .home_bg", {opacity:0.4},'i-=0.3');
     
-            homeMotion.scrollTrigger.refresh();
     
             //top 라운드
             const roundMotion = gsap.timeline({scrollTrigger: {
@@ -281,7 +270,6 @@ $(function(){
             horizontalScroll
             .to('.slide_inner2', {xPercent:-83});
     
-            horizontalScroll.scrollTrigger.refresh();
     
             //bottom 라운드
             const roundMotion2 = gsap.timeline({scrollTrigger: {
@@ -310,8 +298,6 @@ $(function(){
             roundMotionEnd2
             .to(".sc_round.r_bottom",{yPercent:60});
     
-            roundMotion2.scrollTrigger.refresh();
-            roundMotionEnd2.scrollTrigger.refresh();
             
     
         },
@@ -371,7 +357,6 @@ $(function(){
                   pin: true,
                 },
             });
-            coverPin.scrollTrigger.refresh();
             
             //home 메인 타이틀 pin
             gsap.to(".sc_home .group_title", {
@@ -473,6 +458,7 @@ $(function(){
         
     });
     
-})
-
-
+    window.addEventListener("resize", ScrollTrigger.update);
+  }
+  
+  init();
