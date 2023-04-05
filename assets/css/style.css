@@ -623,6 +623,7 @@ body {
   align-items: flex-start;
   align-content: flex-start;
   overflow: hidden;
+  z-index: 100;
 }
 .sc_home .group_title {
   position: absolute;
@@ -731,6 +732,7 @@ body {
   height: 80vw;
   margin-top: -7.5vw;
   overflow: hidden;
+  z-index: 95;
 }
 @media (max-width: 1023px) {
   .sc_round {
