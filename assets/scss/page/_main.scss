@@ -11,7 +11,7 @@
     align-items: flex-start;
     align-content: flex-start;
     overflow: hidden;
-    z-index: 100;
+    z-index: 500;
     .group_title {
         position: absolute;
         top: 0;
@@ -106,8 +106,7 @@
     position: relative;
     height: 80vw;
     margin-top: -7.5vw;
-    overflow: hidden;
-    z-index: 95;
+    overflow: hidden;    
     @include tablet {
         height: 115vw;
         &.r_top {
