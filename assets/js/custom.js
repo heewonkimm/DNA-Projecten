@@ -58,18 +58,17 @@ function init() {
     
             //가로스크롤
             const horizontalScroll = gsap.timeline({
-                ease:'none',
                 scrollTrigger: {
                 trigger: ".activity_inner1",
                 pin: true,
                 scrub: 1,
                 start: "50% 40%",
-                end: "100% -40%",
             }});
             horizontalScroll
-            .addLabel('f')
-            .to('.slide_inner2', {xPercent:-60},'f')
-    
+            .addLabel('p')
+            .to('.slide_inner2', {xPercent:-60},'p')
+            .to('.activity_inner2 .group_text', {yPercent: -100, duration:0.1},'p')
+
     
             //bottom 라운드
             const roundMotion2 = gsap.timeline({scrollTrigger: {
@@ -96,7 +95,6 @@ function init() {
             });
             roundMotionEnd2
             .to(".sc_round.r_bottom",{yPercent:30});
-    
     
         },
         "(min-width: 768px) and (max-width: 1300px)": function() {
@@ -151,19 +149,18 @@ function init() {
             .to(".sc_round.r_top",{yPercent:40});
             
             //가로스크롤
-            const horizontalScroll = gsap.timeline({
-                ease:'none',
+            const horizontalScroll2 = gsap.timeline({
                 scrollTrigger: {
                 trigger: ".activity_inner1",
                 pin: true,
                 scrub: 1,
                 start: "53% 41%",
-                end: "101% -41%",
             }});
-            horizontalScroll
-            .addLabel('q')
-            .to('.slide_inner2', {xPercent:-61},'q')
-    
+            horizontalScroll2
+            .addLabel('r')
+            .to('.slide_inner2', {xPercent:-61},'r')
+            .to('.activity_inner2 .group_text', {yPercent: -160, duration:0.1},'r')
+
     
             //bottom 라운드
             const roundMotion2 = gsap.timeline({scrollTrigger: {
@@ -190,7 +187,6 @@ function init() {
             });
             roundMotionEnd2
             .to(".sc_round.r_bottom",{yPercent:50});
-    
     
         },
         "(max-width: 767px)": function() {
@@ -258,18 +254,18 @@ function init() {
             });
     
             //가로스크롤
-            const horizontalScroll = gsap.timeline({
-                ease:'none',
+            const horizontalScroll3 = gsap.timeline({
                 scrollTrigger: {
                 trigger: ".activity_inner1",
                 pin: true,
                 scrub: 1,
                 start: "54% 41%",
-                end: "100% -41%",
             }});
-            horizontalScroll
-            .to('.slide_inner2', {xPercent:-83});
-    
+            horizontalScroll3
+            .addLabel('t')
+            .to('.slide_inner2', {xPercent:-83},'t')
+            .to('.activity_inner2 .group_text', {yPercent: -150, duration:0.1},'t')
+
     
             //bottom 라운드
             const roundMotion2 = gsap.timeline({scrollTrigger: {
@@ -297,8 +293,6 @@ function init() {
             });
             roundMotionEnd2
             .to(".sc_round.r_bottom",{yPercent:60});
-    
-            
     
         },
         "all": function(){
@@ -394,8 +388,8 @@ function init() {
                 stagger: 0.2,
                 scrollTrigger: {
                     trigger:".sc_work .group_bottom",
-                    start:"25% 70%",
-                    end:"35% 60%",
+                    start:"0% 70%",
+                    end:"25% 60%",
                 }
             });
     
@@ -463,3 +457,7 @@ function init() {
   }
   
   init();
+
+window.addEventListener('resize', function() {
+    location.reload();
+});
