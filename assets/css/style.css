@@ -340,7 +340,7 @@ body {
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 100;
+  z-index: 501;
   padding: 2.60416vw 5.2083vw 0 5.2083vw;
 }
 .header .group_logo {
