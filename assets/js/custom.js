@@ -1,5 +1,6 @@
+window.onload = function() {
+    document.body.style.visibility = 'visible';
 
-function init() {
     gsap.registerPlugin(ScrollTrigger);
 
     ScrollTrigger.saveStyles(".sc_round.r_top, .group_main, .slide_inner2, .group_text, .cover");
@@ -309,26 +310,26 @@ function init() {
     
             loadAni2
             .addLabel('d')
-            .to(".title_box .alp1_left span:nth-child(1)", {x:0, opacity:1},'d')
-            .to(".title_box .alp1_left span:nth-child(2)", {x:0, opacity:1},'d+=0.05')
-            .to(".title_box .alp1_left span:nth-child(3)", {x:0, opacity:1},'d+=0.1')
-            .to(".title_box .alp1_left span:nth-child(4)", {x:0, opacity:1},'d+=0.15')
-            .to(".title_box .alp1_left span:nth-child(5)", {x:0, opacity:1},'d+=0.2')
-            .to(".title_box .alp1_left span:nth-child(6)", {x:0, opacity:1},'d+=0.25')
+            .to(".title_box .alp1_left span:nth-child(1)", {x:0, opacity:1},'d+=0.03')
+            .to(".title_box .alp1_left span:nth-child(2)", {x:0, opacity:1},'d+=0.08')
+            .to(".title_box .alp1_left span:nth-child(3)", {x:0, opacity:1},'d+=0.13')
+            .to(".title_box .alp1_left span:nth-child(4)", {x:0, opacity:1},'d+=0.18')
+            .to(".title_box .alp1_left span:nth-child(5)", {x:0, opacity:1},'d+=0.23')
+            .to(".title_box .alp1_left span:nth-child(6)", {x:0, opacity:1},'d+=0.28')
     
-            .to(".title_box .alp1_right span:nth-child(1)", {x:0, opacity:1},'d+=0.3')
-            .to(".title_box .alp1_right span:nth-child(2)", {x:0, opacity:1},'d+=0.35')
-            .to(".title_box .alp1_right span:nth-child(3)", {x:0, opacity:1},'d+=0.4')
+            .to(".title_box .alp1_right span:nth-child(1)", {x:0, opacity:1},'d+=0.33')
+            .to(".title_box .alp1_right span:nth-child(2)", {x:0, opacity:1},'d+=0.38')
+            .to(".title_box .alp1_right span:nth-child(3)", {x:0, opacity:1},'d+=0.43')
     
-            .to(".title_box .alp2 span:nth-child(1)", {x:0, opacity:1},'d+=0.45')
-            .to(".title_box .alp2 span:nth-child(2)", {x:0, opacity:1},'d+=0.5')
-            .to(".title_box .alp2 span:nth-child(3)", {x:0, opacity:1},'d+=0.55')
-            .to(".title_box .alp2 span:nth-child(4)", {x:0, opacity:1},'d+=0.6')
-            .to(".title_box .alp2 span:nth-child(5)", {x:0, opacity:1},'d+=0.65')
-            .to(".title_box .alp2 span:nth-child(6)", {x:0, opacity:1},'d+=0.7')
-            .to(".title_box .alp2 span:nth-child(7)", {x:0, opacity:1},'d+=0.75')
-            .to(".title_box .alp2 span:nth-child(8)", {x:0, opacity:1},'d+=0.8')
-            .to(".title_box .alp2 span:nth-child(9)", {x:0, opacity:1},'d+=0.85')
+            .to(".title_box .alp2 span:nth-child(1)", {x:0, opacity:1},'d+=0.48')
+            .to(".title_box .alp2 span:nth-child(2)", {x:0, opacity:1},'d+=0.53')
+            .to(".title_box .alp2 span:nth-child(3)", {x:0, opacity:1},'d+=0.58')
+            .to(".title_box .alp2 span:nth-child(4)", {x:0, opacity:1},'d+=0.63')
+            .to(".title_box .alp2 span:nth-child(5)", {x:0, opacity:1},'d+=0.68')
+            .to(".title_box .alp2 span:nth-child(6)", {x:0, opacity:1},'d+=0.73')
+            .to(".title_box .alp2 span:nth-child(7)", {x:0, opacity:1},'d+=0.78')
+            .to(".title_box .alp2 span:nth-child(8)", {x:0, opacity:1},'d+=0.83')
+            .to(".title_box .alp2 span:nth-child(9)", {x:0, opacity:1},'d+=0.88')
     
             //header 로고 오파시티
             gsap.to(".header .headertxt", {
@@ -452,12 +453,10 @@ function init() {
         }
         
     });
-    
-    window.addEventListener("resize", ScrollTrigger.update);
-  }
-  
-  init();
 
-window.addEventListener('resize', function() {
-    location.reload();
-});
+    window.addEventListener("resize", ScrollTrigger.update);
+
+    window.addEventListener('resize', function() {
+        location.reload();
+    });
+};
