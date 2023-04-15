@@ -632,7 +632,7 @@ body {
   width: 100vw;
   left: 0;
   padding-left: 5.2vw;
-  z-index: 10;
+  z-index: 20;
 }
 .sc_home .group_title .title_box {
   position: absolute;
